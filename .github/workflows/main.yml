@@ -13,4 +13,7 @@ jobs:
         run: echo "Hello, GitHub Actions!"
 
       - name: Test Internet Connectivity
-        run: curl -I https://www.google.com 
+        run: curl -I https://www.google.com
+      
+      - name: List Files in the Workspace
+        run: ls -la  # Lists all files, including hidden ones
