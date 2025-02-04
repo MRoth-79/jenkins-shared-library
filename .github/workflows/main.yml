@@ -20,3 +20,6 @@ jobs:
 
       - name: Show Date and Time in Israel
         run: ./show_datetime.sh  # Runs the Bash script
+
+      - name: Check Palindrome
+        run: python3 ./Palindrome.py  # Runs the Python script
