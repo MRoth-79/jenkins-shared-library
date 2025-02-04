@@ -1,16 +1,16 @@
 name: My First Action
 
-on: push  # Runs when code is pushed
+on: push
 
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # This checks out your repo
-      
+        uses: actions/checkout@v4
+
       - name: Print Hello World
         run: echo "Hello, GitHub Actions!"
-      
-      - name: Ping Google
-        run: ping -c 4 google.com  # This pings google.com 4 times
+
+      - name: Test Internet Connectivity
+        run: curl -I https://www.google.com
