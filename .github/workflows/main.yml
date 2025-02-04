@@ -3,10 +3,14 @@ name: My First Action
 on: push  # Runs when code is pushed
 
 jobs:
-  my-job: #Here you put the name of the job
-    runs-on: ubuntu-latest # The CI-CD pipeline will run on Ubuntu
+  my-job:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        run: git clone https://github.com/MRoth-79/jenkins-shared-library.git  # Gets the latest code, in other words it does 'git clone' 
+        uses: actions/checkout@v4  # This checks out your repo
+      
       - name: Print Hello World
-        run: echo "Hello, GitHub Actions!" # This is just the command
+        run: echo "Hello, GitHub Actions!"
+      
+      - name: Ping Google
+        run: ping -c 4 google.com  # This pings google.com 4 times
