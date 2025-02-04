@@ -17,3 +17,6 @@ jobs:
       
       - name: List Files in the Workspace
         run: ls -la  # Lists all files, including hidden ones
+
+      - name: Show Date and Time in Israel
+        run: ./show_datetime.sh  # Runs the Bash script
